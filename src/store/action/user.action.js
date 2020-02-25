@@ -3,10 +3,6 @@ import axios from '../../helper/axios';
 
 var queryString = require('querystring');
 
-const session_id = JSON.parse(localStorage.getItem('sessionId')).session_id;
-
-const user_id = JSON.parse(localStorage.getItem('user')).id;
-
 
 const getCreatedListsReq = () => {
     return {
@@ -164,7 +160,9 @@ const markFavoriteFail = (error) => {
 const markFavorite = (movieId) => {
     return dispatch => {
         dispatch(markFavoriteReq());
+        const session_id = JSON.parse(localStorage.getItem('sessionId')).session_id;
 
+        const user_id = JSON.parse(localStorage.getItem('user')).id;
         const url = process.env.REACT_APP_API_URL + `/account/${user_id}/favorite?${queryString.stringify({
             api_key: process.env.REACT_APP_API_KEY,
             session_id: session_id
@@ -211,6 +209,7 @@ const add2ListFail = (error) => {
 const add2List = (listId , movieId) => {
     return dispatch => {
         dispatch(add2ListReq());
+        const session_id = JSON.parse(localStorage.getItem('sessionId')).session_id;
 
         const url = process.env.REACT_APP_API_URL + `/list/${listId}/add_item?${queryString.stringify({
             api_key: process.env.REACT_APP_API_KEY,
@@ -252,6 +251,7 @@ const removeMovieFail = (error) => {
 const removeMovie = (listId , movieId) => {
     return dispatch => {
         dispatch(removeMovieReq());
+        const session_id = JSON.parse(localStorage.getItem('sessionId')).session_id;
 
         const url = process.env.REACT_APP_API_URL + `/list/${listId}/remove_item?${queryString.stringify({
             api_key: process.env.REACT_APP_API_KEY,
@@ -293,6 +293,7 @@ const clearListFail = (error) => {
 const clearList = (listId , confirm) => {
     return dispatch => {
         dispatch(clearListReq());
+        const session_id = JSON.parse(localStorage.getItem('sessionId')).session_id;
 
         const url = process.env.REACT_APP_API_URL + `/list/${listId}/clear?${queryString.stringify({
             api_key: process.env.REACT_APP_API_KEY,
