@@ -1,0 +1,234 @@
+
+.input-wrapper {
+  width: 500px;
+  margin: 50px auto;
+}
+
+input {
+  height: 60px;
+  width: 100%;
+  min-width: 100%;
+  padding: 0;
+  border-radius: 0;
+  line-height: 70px;
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 30px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid whitesmoke;
+  font-family: Roboto Slab, sans-serif;
+}
+
+.list {
+  max-height: 400px;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.custom-root {
+  background-color: hsla(0, 0%, 100%, .6);
+}
+
+.custom-divider {
+  background-color: #000;
+}
+
+.custom-selected {
+  background-color: #f00;
+}
+
+.react-contextmenu {
+  background-color: rgba(10, 10, 10, 0.829);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 16px;
+  margin: 2px 0 0;
+  min-width: 160px;
+  outline: none;
+  opacity: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  text-align: left;
+  transition: opacity 250ms ease !important;
+}
+
+.react-contextmenu.react-contextmenu--visible {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+.react-contextmenu-item {
+  background: 0 0;
+  border: 0;
+  color: rgb(151, 148, 148);
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 3px 20px;
+  text-align: inherit;
+  white-space: nowrap;
+}
+
+.react-contextmenu-item.react-contextmenu-item--active,
+.react-contextmenu-item.react-contextmenu-item--selected {
+  color: #fff;
+  background-color: #20a0ff;
+  border-color: #20a0ff;
+  text-decoration: none;
+}
+
+.react-contextmenu-item.react-contextmenu-item--disabled,
+.react-contextmenu-item.react-contextmenu-item--disabled:hover {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #878a8c;
+}
+
+.react-contextmenu-item--divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: inherit;
+  margin-bottom: 3px;
+  padding: 2px 0;
+}
+.react-contextmenu-item--divider:hover {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.react-contextmenu-item.react-contextmenu-submenu {
+  padding: 0;
+}
+
+.react-contextmenu-item.react-contextmenu-submenu > .react-contextmenu-item {
+}
+
+.react-contextmenu-item.react-contextmenu-submenu
+  > .react-contextmenu-item:after {
+  content: '▶';
+  display: inline-block;
+  position: absolute;
+  right: 7px;
+}
+
+.example-multiple-targets::after {
+  content: attr(data-count);
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(165, 14, 14, 0.548);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.text-overview {
+  transform: translate(0,-20%);
+  position: absolute;
+  margin: 0 0 2px 2px;
+  top: 25%;
+  left: 0;
+  font-size: .75em;
+  color: whitesmoke;
+}
+
+.more-menu {
+  display: block;
+  overflow: hidden;
+  width: 100px;
+  height: auto;
+}
+
+.menu-overlay {
+  position: fixed;
+  transition: .5s;
+  z-index: 1;
+  background-color: rgba(8, 8, 8, 0.9);
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.menu-overlay-content {
+  width: 100%;
+  top: 30%;
+  position: relative;
+  margin-top: 25px;
+  height: 200px;
+  background-color: rgba(59, 57, 57, 0.767);
+}
+
+.menu-overlay-content .content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 500px;
+  max-height: 180px;
+}
+
+.menu-overlay .closebtn {
+  position: absolute;
+  top: 25%;
+  right: 50%;
+  font-size: 60px;
+  line-height: .20em;
+  border: 0;
+  font-weight: bold;
+  color: #fff;
+  background-color: transparent;
+}
+
+.menu-overlay .mofooter {
+  position: absolute;
+  top: 55%;
+  right: 46%;
+  display: inline;
+  text-align: center;
+}
+
+.btn-green-extra {
+  color:white;
+  width: 100px;
+  border-radius: 35px;
+  background-color: rgb(79, 209, 79);
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.btn-green-extra:hover {
+  background-color: rgba(18, 221, 18, 0.692);
+  color: white;
+}
+
+.btn-cancel {
+  color:white;
+  width: 100px;
+  border-radius: 35px;
+  background-color: rgb(44, 37, 37);
+  font-size: 1.1em;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(17, 16, 16, 0.692);
+  color: white;
+}
+
+
